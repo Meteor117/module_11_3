@@ -7,7 +7,7 @@
 import inspect
 
 def introspection_info(obj):  # функция, проводящая интроспекцию объекта
-    obj_type = type(obj)  # тип объекта.__name__#тип объекта
+    obj_type = type(obj)  # тип объекта
     attributes = [attr for attr in dir(obj) if not callable(getattr(obj, attr))]  # атрибуты  объекта
     methods = [method for method in dir(obj) if callable(getattr(obj, method))]  # методы объекта
     obj_module = inspect.getmodule(obj)  # модуль, к которому принадлежит объект
